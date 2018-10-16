@@ -1,0 +1,84 @@
+Feature : Customer Registration / Save Customer
+		In order to use payment wallet feature
+		As a Wallet user
+		I want to register or save myself	
+		
+Scenario Outline : Customer information submitted with valid data
+	Given Name is "ABC"
+	And name should have only alphabets
+	And MobileNo is "+91-9860121215"
+	And MobileNo is having only digit and + , -
+	And Amount is "1000"
+	And Amount is not null
+	And Amount is not zero
+	And Amount is not Negative
+	When valid customer details are entered "<NAME>" ,"<MobileNo>","<Amount>"
+	Then Customer object should be returned. "<Customer>"
+	
+Examples :
+	|Name|MobileNo|Amount|
+	|ABC|+91-9860121212|1000|	
+	
+Scenario : Customer information submitted with invalid data
+	Given Name is ""
+	And MobileNo is "+91-98601212AD"	
+	And Amount is "10ee0"
+	When invalid customer details are entered "<NAME>" ,"<MobileNo>","<Amount>"
+	Then Customer object will not be created
+	And Application should say please enter valid customer details.
+	
+Feature : Find customer  by mobileNo
+		In order to use payment wallet feature
+		As a Wallet user
+		I want to find Customer by mobileNo
+		
+
+		
+Scenario : Valid MobileNo enter to find customer associated with it.
+		Given MobileNo is "+91-9860121215"	
+		And MobileNo is having only digit and + , -
+		When valid MobileNo is entered "<MobileNo>"
+		Then Customer object should be returned. "<Customer>"
+Examples :
+	|MobileNo|
+	|+91-98601212133|
+	
+Scenario : Invalid MobileNo enter to find customer associated with it.
+		Given MobileNo is "+91-98601dert5"	
+		When Invalid MobileNo is entered "<MobileNo>"
+		Then Application should say please enter valid "<MobileNo>"
+		
+Examples :
+	|MobileNo|
+	|+91-986012121AD|
+	
+Feature : Show wallet balance of customer
+
+Scenario : Valid MobileNo enter to fetch wallet balance of customer.
+		Given MobileNo is "+91-9860121215"	
+		And MobileNo is having only digit and + , -
+		When valid MobileNo is entered "<MobileNo>"
+		Then Wallet object should be returned balance attribute. "<wallet>"
+Examples :
+	|MobileNo|
+	|+91-98601212133|
+	
+Scenario : Invalid MobileNo enter to fetch wallet balance of customer.
+		Given MobileNo is "+91-98601dert5"	
+		When Invalid MobileNo is entered "<MobileNo>"
+		Then Application should say please enter valid "<MobileNo>"
+		
+Examples :
+	|MobileNo|
+	|+91-986012121AD|	
+	
+Scenario : Non registered MobileNo enter to fetch wallet balance of customer.
+		Given MobileNo is "+91-9860125699"	
+		When Non registered MobileNo is entered "<MobileNo>"
+		Then Application should say no record found for mentioned "<MobileNo>"
+		
+Examples :
+	|MobileNo|
+	|+91-986012121AD|	
+		
+	
