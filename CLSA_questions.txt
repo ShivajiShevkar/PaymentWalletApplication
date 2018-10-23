@@ -1,0 +1,21 @@
+1. can u explain me previous project background
+2. what are functional interfaces in Java 1.8
+3. what are default and static methods in Java 1.8
+4. is there diamond problem because of default methods
+5. what are the marker interfaces
+6. what are the various rules while catching the exceptions. sequence of exceptions in catch block, why sequence important
+7. encryption algorithm problem statement - if input "abc" then ouput "def", means in output replace input character with 3rd position character.
+8. Have u used collections, which collections used.
+9. How do u iterate arraylist, how may ways can iterate arraylist. syntax of iterate arraylist using foreach loop
+10. how many ways we can iterate hashmap
+11. difference between array & arraylist
+12. what are the fail fast & fail safe iterators
+13. can we remove element from set while iterating using iterator
+14. if there is emp_name, salary & dept_Id columns in employee table. Find out the deptId which is having maximum avg salary.
+15. query to get 3rd highest salary from employee table.
+16. spring beans life cycle
+17. What are the annotations in spring
+18. What is use of Autowired annotation
+19. What are the different scopes of the beans
+20. How can manage the database credentials in application for different environments like dev, qa, stag, prod.
+

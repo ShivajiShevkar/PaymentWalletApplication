@@ -1,0 +1,25 @@
+Question for CLSA
+
+1)How to iterate hashmap in java.
+2)How to sort values of hashmap.
+3)What is differance between comparable and comprator.
+4)what is feature of 1.7 & 1.8
+5)How hashset implement internally.
+6)Differnce between in Stringbuffer and stringBuilder.
+7)How conncurrentHashMap different from Hashmap.
+8)Method of Object Class.
+9)How to write custom immutable class.
+10)How to implement singleton class.
+11)what is use of singleton class.
+12)how to do connection Database using Spring.
+13)what is default scope of bean and other scope
+14)can you create multiple object using spring.
+15)exaplin spring bean life cycle.
+16)what is differnce between arraylist and vector
+17)can i declare final arraylist.  ----- ans--collection.unmodifiablelist;
+18)difference in hashmap and treemap.
+19)internal datastrucure of Treemap.
+20)Why String is immutable.
+21)How to compare two string.
+22)if i create new string using new create what will happen-how many object will create.
+23)Joins in sql.
